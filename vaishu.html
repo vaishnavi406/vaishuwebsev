@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnavi's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #282828;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        .nav-bar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            margin: 0 10px; /* Add space between links */
+            border-bottom: 2px solid transparent; /* Add bottom line */
+        }
+
+        .nav-bar a:hover {
+            background-color: #575757;
+            border-bottom: 2px solid white; /* Change line color on hover */
+        }
+
+        .nav-bar a .date {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-left: 10px;
+        }
+
+        .container {
+            padding: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .sub-links {
+            display: none;
+            padding-left: 20px;
+            list-style-type: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        footer {
+            background-color: #282828;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vaishnavi's Website</h1>
+    </header>
+
+    <div class="nav-bar">
+        <a href="#" onclick="toggleLinks('ai')">Artificial Intelligence <span class="date">(Dec 2024)</span></a>
+        <a href="#" onclick="toggleLinks('crypto')">Cryptocurrency <span class="date">(Nov 2024)</span></a>
+        <a href="#">Contact <span class="date">(Dec 2024)</span></a>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <ul id="ai" class="sub-links">
+                <li><a href="machinelearn.html">About Machine Learning</a></li>
+                <li><a href="vision.html">About Vision in AI</a></li>
+                <li><a href="ethics.html">About Ethics in AI</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <ul id="crypto" class="sub-links">
+                <li><a href="whatiscryptocurrency.html">What is Cryptocurrency?</a></li>
+                <li><a href="blockchain.html">About Blockchain Technology</a></li>
+                <li><a href="popularcryptocurrency.html">Popular Cryptocurrencies</a></li>
+                <li><a href="smartcontracts.html">Smart Contracts and Cryptocurrency Wallets</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Vaishnavi's Website. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleLinks(id) {
+            const allLinks = document.querySelectorAll('.sub-links');
+            allLinks.forEach(link => link.classList.remove('active'));
+
+            const selectedLinks = document.getElementById(id);
+            selectedLinks.classList.add('active');
+        }
+    </script>
+</body>
+</html>
